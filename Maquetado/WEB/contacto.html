@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Pagina Web</title>
+    <link rel="stylesheet" href="../ESTILO/style.css">
+    <link rel="stylesheet" href="./contacto.css">
+    <!-- Enlace a FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Barra superior -->
+    <div class="barra_superior">
+        <div class="contacto">
+            <span>📞 +51 982 704 736</span>
+            <br>
+            <span>✉️ reservas@tambopatarainforesttours.com</span>
+            <span></span>
+        </div>
+
+        <div class="redes-lenguaje">
+            <div class="redes_sociales">
+                <a href="#"><img src="../LOGO REDES SOCIALES/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="../LOGO REDES SOCIALES/whatsapp.png" alt="WhatsApp"></a>
+            </div>
+            <div class="lenguajes">
+                <a href="#"><img src="../LOGO DE PAISES/english.png" alt="EN"> EN</a>
+                <a href="#"><img src="../LOGO DE PAISES/france.png" alt="FR"> FR</a>
+                <a href="#"><img src="../LOGO DE PAISES/portugues.png" alt="PT"> PT</a>
+                <a href="#"><img src="../LOGO DE PAISES/español.png" alt="ES"> ES</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Encabezado -->
+    <header>
+        <div class="contenedor-logo">
+            <a href="./index.html">
+                <img src="../LOGO PRINCIPAL/logo.png" alt="Logo Tambopata" class="logo-imagen">
+            </a>
+            
+        </div>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-hamburguesa">&#9776;</label>
+        <nav class="navegacion-principal">
+            <ul class="menu-principal">
+                <li><a href="../WEB/index.html" class="activo">INICIO</a></li>
+                <li><a href="../WEB/nosotros.html">NOSOTROS</a></li>
+                <li class="menu-submenu">
+                    <a href="#">TOURS &#9662;</a>
+                    <ul class="menu-desplegable">
+                        <li><a href="#">Reserva Nacional de Tambopata/Lago Sandoval</a></li>
+                        <li><a href="#">Collpa Chuncho con Visita a la Comunidad Nativa de Infierno</a></li>
+                        <li><a href="#">Tour Full Day Aventura</a></li>
+                        <li><a href="#">Tour Jaguar</a></li>
+                        <li><a href="#">Tour Místico Ayahuasca</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">LUGARES</a></li>
+                <li><a href="#">GALERÍA</a></li>
+                <li><a href="../WEB/contacto.html">CONTACTOS</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Cuerpo -->
+
+    <div class="contenedor-imagen">
+        <img src="../IMAGENES/ave.jpg" alt="ave">
+    </div>
+
+    <!-- Cuerpo del formulario -->
+    <div class="contenedor-contacto">
+        <div class="informacion-contacto">
+            <h1>Comunícate con nosotros</h1>
+            <p>Consultas, reservas y dudas, contáctenos.</p>
+            <p>Complete correctamente el formulario de contacto, y en seguida nos comunicaremos con usted.</p>
+            <div class="iconos-sociales">
+                <!-- Icono de Facebook -->
+                <a href="https://www.facebook.com/tambopatarainforesttours/" target="_blank"><i class="fab fa-facebook"></i></a>
+                <!-- Icono de WhatsApp -->
+                <a href="https://api.whatsapp.com/send/?phone=%2B51982704736&text&type=phone_number&app_absent=0" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <div class="formulario-contacto">
+            <form>
+                <div class="grupo-formulario">
+                    <input type="text" placeholder="Nombre" required>
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="grupo-formulario">
+                    <input type="tel" placeholder="Celular" required>
+                    <input type="text" placeholder="Asunto" required>
+                </div>
+                <textarea placeholder="Mensaje" required></textarea>
+                <button type="submit">ENVIAR MENSAJE <i class="fas fa-check"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <!-------------------------------------------------------------------------------------------------------------->
+
+    <div class="detalles-contacto">
+        <div class="tarjeta-contacto">
+            <div class="contenedor-icono">
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="detalles">
+                <h3>Dirección</h3>
+                <p>Av. Leon Velarde, Puerto Maldonado 17001</p>
+            </div>
+        </div>
+
+        <div class="tarjeta-contacto">
+            <div class="contenedor-icono">
+                <a href="https://api.whatsapp.com/send/?phone=%2B51982704736&text&type=phone_number&app_absent=0">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+            <div class="detalles">
+                <h3>Celular</h3>
+                <p><a href="tel:+51982704736">+51982704736</a></p>
+            </div>
+        </div>
+
+        <div class="tarjeta-contacto">
+            <div class="contenedor-icono">
+                <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=contact@example.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <div class="detalles">
+                <h3>Email</h3>
+                <p><a href="mailto:info@tambopatarainforesttours.com">info@tambopatarainforesttours.com</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-------------------------------------------------------------------------------------------------------------->
+
+    <div class="contenedor-mapa">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15601.60621960575!2d-69.19978172627796!3d-12.596408900000013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915c41f9b5f148e5%3A0x381bbd9fbe324bc!2sTambopata%20Rainforest%20Tours!5e0!3m2!1ses!2spe!4v1695850221911!5m2!1ses!2spe"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+
+    <!-- Pie de página -->
+    <footer class="pie-de-pagina">
+        <div class="contenedor-pie">
+            <!-- Columna de contacto -->
+            <div class="columna-pie">
+                <h2 class="titulo-pie">Tambopata <br> Rainforest Tours</h2>
+                <p>Bienvenido a nuestra Agencia Turística en la selva amazónica peruana.</p>
+                <ul class="informacion-contacto">
+                    <li><i class="fa fa-phone"></i> +51 982 704 736</li>
+                    <li><i class="fa fa-envelope"></i> reservas@tambopatarainforesttours.com</li>
+                    <li><i class="fa fa-map-marker"></i> Av. Leon Velarde, Puerto Maldonado 17001</li>
+                    <li><i class="fa fa-check"></i> Política de Protección de datos</li>
+                </ul>
+            </div>
+
+            <!-- Columna de agencia -->
+            <div class="columna-pie">
+                <h3>Agencia Autorizada</h3>
+                <img src="../IMAGENES DE REFERENCIA/aagencia-autorizada.jpg" alt="Agencia de Viajes y Turismo Registrada" class="logo-agencia">
+            </div>
+
+            <!-- Columna de ubicación -->
+            <div class="columna-pie">
+                <h3>UBICACIÓN</h3>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12657.217202518057!2d-69.18070775!3d-12.598370400000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9169dbe67fd7c1a7%3A0x987e0b765368f6c4!2sTambopata%20Rainforest%20Tours!5e0!3m2!1sen!2spe!4v1693177885401!5m2!1sen!2spe" 
+                    width="300" height="200" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <!-- Columna de links de interés -->
+            <div class="columna-pie">
+                <h3>LINKS DE INTERÉS</h3>
+                <a href="https://www.tripadvisor.com" target="_blank">
+                    <img src="../IMAGENES DE REFERENCIA/tripadvisor.jpg" alt="Tripadvisor" class="logo-enlace">
+                </a>
+                <a href="https://www.sernanp.gob.pe" target="_blank">
+                    <img src="../IMAGENES DE REFERENCIA/sernanp.png" alt="SERNANP" class="logo-enlace">
+                </a>
+            </div>
+        </div>
+
+        <!-- Derechos reservados -->
+        <div class="pie-inferior">
+            <p>&copy; Derechos reservados Tambopata Rainforest Tours 2024</p>
+        </div>
+    </footer>
+    
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10; /* Asegura que el menú esté encima de la imagen */
+}
+.image-container img {
+    
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.intro-text h2 {
+    color: red;
+    font-size: 1.5em;
+}
+.intro-section h2 {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.intro-text h3 {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.intro-text p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+.box_1 {
+    background-color: #6a0f0f;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #721919;
+}

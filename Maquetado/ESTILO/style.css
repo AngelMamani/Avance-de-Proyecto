@@ -1,0 +1,633 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/* Estilo de la barra superior */
+.barra_superior {
+    background-color: #3c1a36; /* Color oscuro similar */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.contacto span {
+    margin-right: 20px;
+}
+
+.redes-lenguaje {
+    display: flex;
+    align-items: center;
+}
+
+.redes_sociales a {
+    margin-right: 10px;
+}
+
+.redes_sociales img {
+    width: 20px;
+    height: 20px;
+}
+
+.lenguajes a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.lenguajes img {
+    width: 20px;
+    height: 14px;
+    margin-right: 5px;
+}
+
+.lenguajes a:hover {
+    text-decoration: underline;
+}
+
+/*--------------------------------------------------------------------------------------------------*/
+/* Estilos para el encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10; /* Asegura que el menú esté encima de la imagen */
+}
+
+.contenedor-logo {
+    flex: 1;
+}
+
+.logo-imagen {
+    width: 250px;
+    height: 60px;
+}
+
+/* Menú principal */
+.navegacion-principal {
+    flex: 2;
+    position: relative;
+}
+
+.menu-principal {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-principal li {
+    position: relative;
+    margin-left: 30px;
+}
+
+.menu-principal a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    display: inline-block;
+}
+
+.menu-principal a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #333;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.menu-principal a:hover {
+    color: #ffa500;
+}
+
+.menu-principal a:hover::after {
+    width: 100%;
+}
+
+/* Estilo para el enlace activo */
+.menu-principal a.activo {
+    color: #ffa500; /* Color del menú activo */
+}
+
+.menu-principal a.activo::after {
+    width: 100%; /* Línea activa debajo */
+    background-color: #333; /* Color de la línea activa */
+}
+
+/* Para regresar al estado original al hacer clic en otro */
+.menu-principal a:not(.activo) {
+    color: #333;
+}
+
+.menu-principal a:not(.activo)::after {
+    width: 0;
+    background-color: #333;
+}
+
+.menu-principal a:hover {
+    color: #ffa500;
+}
+
+.activo::after {
+    width: 100%;
+}
+
+/* Estilos para el menú desplegable */
+.menu-submenu {
+    position: relative; /* Necesario para que el submenú se posicione relativo al contenedor padre */
+}
+
+.menu-submenu .menu-desplegable {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    list-style: none;
+    padding: 10px 0;
+    z-index: 999; /* Asegura que el submenú esté sobre otros elementos */
+    width: auto; /* Ajusta el ancho de los sub menus según sea necesario */
+    border: none;
+}
+
+.menu-submenu:hover .menu-desplegable,
+.menu-submenu .menu-desplegable:hover {
+    display: block;
+}
+
+.menu-desplegable li a {
+    color: #ffa500; /* Letras naranjas */
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #000; /* Fondo negro */
+}
+
+.menu-desplegable li a:hover {
+    background-color: #e0b90b;
+    color: #ffff00; /* Letras amarillas cuando pasas el cursor */
+}
+
+/* Estilos adicionales para asegurar que no haya espacio entre el menú y el submenú */
+.menu-principal li {
+    position: relative;
+    margin-left: 20px;
+}
+
+
+/* Estilos para el menú desplegable */
+.menu-submenu .menu-desplegable {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000; /* Fondo negro */
+    list-style: none;
+    padding: 0;
+    z-index: 999;
+    width: 250px;
+    border: none; /* Elimina cualquier borde */
+}
+.menu-submenu:hover .menu-desplegable {
+    display: block;
+}
+
+.menu-desplegable li a {
+    color: #efa00f; /* Letras naranjas */
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    background-color: #000; /* Fondo negro */
+    box-sizing: border-box; /* Para que el padding no se exceda */
+    border: none; /* Elimina cualquier borde que pueda haber */
+}
+
+.menu-desplegable li a:hover {
+    background-color: #f8f8f8a2;/*  color para cambiar el fondo en el sub menú cuando pasa el cursor*/
+}
+
+.menu-principal li a {
+    display: block; /* Hace que todo el casillero sea clickeable en el menú principal */
+    padding: 15px; /* Aumenta el área clickeable */
+    width: 100%;
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+/* Menú hamburguesa */
+.menu-hamburguesa {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Media query para pantallas pequeñas o cuando el menú se acerque al logo */
+/* Aquí van los estilos que se aplicarán cuando la pantalla tenga un ancho de 980px o menos */
+@media (max-width: 1150px) { /* Ajusta este valor para controlar el punto de cambio */
+    .menu-hamburguesa {
+        display: block;
+    }
+
+    .menu-principal {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-principal li {
+        margin-left: 0;
+        text-align: left;
+        padding: 10px;
+        border-bottom: 1px solid #f4f4f4;
+    }
+
+    .menu-principal li:last-child {
+        border-bottom: none;
+    }
+
+    .menu-principal a {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    /* Mostrar el menú cuando el checkbox está marcado */
+    #menu-toggle:checked ~ nav .menu-principal {
+        display: flex;
+    }
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Contenedor de imagen de fondo */
+.contenedor-imagen {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.imagen-fondo {
+    width: 100%;
+    height: auto;
+}
+
+/* Sección de destinos */
+.destinos {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.contenedor-titulo {
+    background-color: #d5f5e3;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.contenedor-titulo h2 {
+    font-size: 36px;
+    color: #333;
+}
+
+.contenedor-titulo p {
+    font-size: 20px;
+    color: #666;
+}
+
+.contenedor-destinos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.caja-destino {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.caja-destino img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.caja-destino h3 {
+    font-size: 18px;
+    color: #666;
+    margin: 10px 0;
+}
+
+.caja-destino p {
+    font-size: 16px;
+    color: #666;
+}
+
+.caja-destino h4 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.caja-destino a {
+    font-size: 16px;
+    color: #00aaff;
+    text-decoration: none;
+}
+
+.caja-destino:hover {
+    transform: scale(1.05);
+}
+
+/* Para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .caja-destino {
+        width: 100%;
+    }
+
+    .contenedor-destinos {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Sección de nuestros tours */
+.heroe {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.imagen-heroe {
+    width: 100%;
+    height: auto;
+}
+
+/* Contenedor principal */
+.contenedor {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.titulo-principal {
+    grid-column: span 2;
+    padding-bottom: 20px;
+}
+
+.titulo-principal h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.titulo-principal h2 {
+    font-size: 36px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Contenedor de contenido */
+.contenedor-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.item-contenido {
+    display: flex;
+    align-items: flex-start;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.icono {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.texto p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Estilos para la imagen */
+.contenedor-imagen-bloque {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-bloque {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-principal {
+        grid-column: span 1;
+    }
+
+    .contenedor-contenido {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Sección de videos */
+.seccion-video {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.contenedor-video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.imagen-fondo-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.contenido-video {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+    text-align: center;
+}
+
+.contenido-video h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+iframe {
+    width: 560px;
+    height: 315px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .contenido-video h1 {
+        font-size: 36px;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Pie de página */
+.pie-de-pagina {
+    background-color: #32001e;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.contenedor-pie {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.columna-pie {
+    flex: 1;
+    margin: 10px;
+    max-width: 250px;
+}
+
+.titulo-pie {
+    font-size: 24px;
+    color: yellow;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.informacion-contacto {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.informacion-contacto li {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.logo-agencia, .logo-enlace {
+    width: 100%;
+    max-width: 200px;
+    margin: 10px 0;
+}
+
+.pie-inferior {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .contenedor-pie {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .columna-pie {
+        max-width: 100%;
+        margin: 20px 0;
+    }
+}
+
+.columna-pie iframe {
+    width: 100%;
+    height: 200px;
+    max-width: 300px;
+    border-radius: 5px;
+}
